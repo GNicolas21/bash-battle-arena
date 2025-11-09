@@ -1,0 +1,13 @@
+#!/bin/bash
+# Script para contar las líneas de un archivo
+
+if [ $# -eq 0 ]; then
+    echo "Uso: $0 nombre_archivo"
+    exit 1
+fi
+
+archivo="$1"
+
+
+lineas=$(wc -l < "$archivo")
+echo "El archivo '$archivo' tiene $lineas líneas."
